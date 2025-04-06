@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const skills = [
   'Generative AI',
   'Pytorch',
-  'Bayesian modelling',
+  'Bayesian Modelling',
   'Machine Learning',
   'Statistics',
   'Finetuning'
