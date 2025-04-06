@@ -44,8 +44,8 @@ const App = () => {
         <h2 className="text-3xl text-[#36454F] mb-4">About Me</h2>
         <p className="text-lg text-[#36454F] mb-4">
           🎓 MA in Statistics, UC Berkeley<br />
-          🎓 BS in Computer Science, University of Denver
-          \n\n Hey there! I currently spend my days developing innovative solutions in oncology and digital health at AstraZeneca. I love using my computational skills to solve real problems we face. When I'm not thinking about ways to reduce patient burden or improve biomarker identification strategies, you can find me hiking, climbing, and drinking lattes.
+          🎓 BS in Computer Science, University of Denver<br /><br />
+          Hey there! I currently spend my days developing innovative solutions in oncology and digital health at AstraZeneca. I love using my computational skills to solve real problems we face. When I'm not thinking about ways to reduce patient burden or improve biomarker identification strategies, you can find me hiking, climbing, and drinking lattes.
         </p>
       </section>
 
