@@ -15,7 +15,7 @@ export const metadata = {
   title: "Kaitlin Smith",
   description: "Personal portfolio for Kaitlin Smith",
   icons: {
-    icon: [{url: "/images/favicon.svg"}]
+    icon: [{url: "/kaitlin-portfolio-/images/favicon.svg"}]
   }
 };
 
