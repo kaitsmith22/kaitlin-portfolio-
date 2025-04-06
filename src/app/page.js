@@ -1,103 +1,118 @@
-import Image from "next/image";
+"use client";
+import React, { useState } from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { motion } from 'framer-motion';
 
-export default function Home() {
+const skills = [
+  'Generative AI',
+  'Pytorch',
+  'Bayesian modelling',
+  'Machine Learning',
+  'Statistics',
+  'Finetuning'
+];
+
+const projects = [
+  {
+    title: 'Reconstructing Damaged Egyptian Paintings',
+    description: 'Using stable diffusion models to restore ancient Egyptian art with high accuracy.',
+    details: 'This project utilized advanced diffusion models to predict and restore missing sections of ancient Egyptian paintings. Leveraging high-resolution image datasets and fine-tuning diffusion models improved the reconstruction quality.',
+    github: 'https://github.com/kaitsmith22/stat222-generative-ai/tree/main'
+  },
+  {
+    title: 'Training Graph Neural Networks for hERG Classification',
+    description: 'Developing GNN models to predict hERG channel blockage efficiently.',
+    details: 'The project involved creating a pipeline to train Graph Neural Networks (GNNs) to classify compounds that might block hERG channels, reducing the risk of cardiotoxicity. Performance was optimized using hyperparameter tuning and feature engineering.',
+    github: 'https://github.com/kaitsmith22/hERG_blockers'
+  }
+];
+
+const App = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-[#f1f1e6] text-[#f25c27] font-aptos p-8">
+      <header className="text-left mb-12 relative">
+        <div className="relative inline-block">
+          <div className="absolute inset-0 bg-[#f25c27] rounded-full w-full h-8 top-4 -z-10"></div>
+          <h1 className="text-5xl font-bold text-[#36454F] relative z-10">Kaitlin Smith</h1>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <p className="text-lg text-[#36454F] mt-4">Showcasing my expertise in AI and Data Science</p>
+      </header>
+
+      <section className="mb-16">
+        <h2 className="text-3xl text-[#36454F] mb-4">About Me</h2>
+        <p className="text-lg text-[#36454F] mb-4">
+          🎓 MA in Statistics, UC Berkeley<br />
+          🎓 BS in Computer Science, University of Denver
+          \n\n Hey there! I currently spend my days developing innovative solutions in oncology and digital health at AstraZeneca. I love using my computational skills to solve real problems we face. When I'm not thinking about ways to reduce patient burden or improve biomarker identification strategies, you can find me hiking, climbing, and drinking lattes.
+        </p>
+      </section>
+
+      <section className="mb-16">
+        <h2 className="text-3xl text-[#36454F] mb-4">Skills</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {skills.map((skill, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.1 }}
+              className="p-4 bg-white rounded-2xl shadow-md text-center"
+            >
+              {skill}
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-3xl text-[#36454F] mb-4">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {projects.map((project, index) => (
+            <Card
+              key={index}
+              onClick={() => setSelectedProject(project)}
+              className="bg-white rounded-2xl shadow-lg cursor-pointer hover:shadow-xl transition"
+            >
+              <CardContent className="p-6">
+                <h3 className="text-2xl text-[#36454F] font-semibold mb-2">{project.title}</h3>
+                <p className="text-lg">{project.description}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {selectedProject && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-8 rounded-2xl shadow-2xl max-w-lg w-full">
+            <h2 className="text-3xl font-bold mb-4">{selectedProject.title}</h2>
+            <p className="text-lg text-[#36454F] mb-4">{selectedProject.details}</p>
+            {selectedProject.github && (
+              <a
+                href={selectedProject.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#f25c27] underline block mb-2"
+              >
+                View on GitHub
+              </a>
+            )}
+            <button
+              onClick={() => setSelectedProject(null)}
+              className="mt-4 bg-[#f25c27] text-white px-4 py-2 rounded-lg hover:bg-[#e55e3c]"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
+      <footer className="text-center mt-12 text-sm text-[#36454F]">
+        &copy; {new Date().getFullYear()} Kaitlin Smith. All rights reserved.
       </footer>
     </div>
   );
-}
+};
+
+export default App;
+
