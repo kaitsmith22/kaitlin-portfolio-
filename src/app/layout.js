@@ -13,10 +13,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Kaitlin Smith",
-  description: "Personal portfolio for Kaitlin Smith",
-  icons: {
-    icon: [{url: "/kaitlin-portfolio-/images/favicon.svg"}]
-  }
+  description: "Personal portfolio for Kaitlin Smith"
 };
 
 export default function RootLayout({ children }) {
