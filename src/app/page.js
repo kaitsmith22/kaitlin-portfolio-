@@ -12,6 +12,16 @@ const skills = [
   'Finetuning'
 ];
 
+const publications = [
+  {
+    'title':'AI-driven predictive biomarker discovery with contrastive learning to improve clinical trial outcomes',
+    'description': "Modern clinical trials can capture tens of thousands of clinicogenomic measurements per individual. Discovering predictive biomarkers, as opposed to prognostic markers, remains challenging. To address this, we present a neural network framework based on contrastive learning—the Predictive Biomarker Modeling Framework (PBMF)—that explores potential predictive biomarkers in an automated, systematic, and unbiased manner. The PBMF offers a general-purpose, rapid, and robust approach to inform biomarker strategy, providing actionable outcomes for clinical decision-making.",
+    "journal": "Cancer Cell",
+    "authors": "Gustavo Arango-Argoty, Damian E. Bikiel, Gerald J. Sun, Elly Kipkogei, Kaitlin M. Smith, Sebastian Carrasco Pro, Elizabeth Y. Choe, and Etai Jacob",
+    "link": 'https://doi.org/10.1016/j.ccell.2025.03.029'
+  }
+]
+
 const projects = [
   {
     title: 'Reconstructing Damaged Egyptian Paintings',
@@ -60,6 +70,33 @@ const App = () => {
             >
               {skill}
             </motion.div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mb-16">
+        <h2 className="text-3xl text-[#36454F] mb-4">Publications</h2>
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
+          {publications.map((publication, index) => (
+            <Card
+              key={index}
+              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition"
+            >
+              <CardContent className="p-6">
+              <h3 className="text-2xl text-[#36454F] font-semibold mb-2">{publication.title}</h3>
+              <h4 className="text-lg text-[#36454F] font-semibold mb-2 italic"> {publication.journal}</h4>
+              <h4 className="text-lg text-[#36454F] font-semibold mb-2"> {publication.authors}</h4>
+              <p className="text-lg">{publication.description}</p>
+              <a
+                href={publication.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#f25c27] underline block mb-2"
+              >
+                View publication
+              </a>
+            </CardContent>
+            </Card>
           ))}
         </div>
       </section>
