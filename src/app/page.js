@@ -19,6 +19,13 @@ const publications = [
     "journal": "Cancer Cell",
     "authors": "Gustavo Arango-Argoty, Damian E. Bikiel, Gerald J. Sun, Elly Kipkogei, Kaitlin M. Smith, Sebastian Carrasco Pro, Elizabeth Y. Choe, and Etai Jacob",
     "link": 'https://doi.org/10.1016/j.ccell.2025.03.029'
+  },
+  {
+    'title': 'Effect of Single-Stage Posterior Vomerine Ostectomy/Premaxillary Setback on Facial Growth in Bilateral Cleft Lip and Protuberant Premaxilla',
+    'description': 'Retrospective pilot study evaluating the impact of single-stage posterior vomerine ostectomy with premaxillary setback (PVPS) on craniofacial development in children with bilateral cleft lip and palate (BCLP) and a protuberant premaxilla. Of 22 cephalometric variables, 16 showed no statistically significant differences between PVPS-treated and control groups, indicating minimal overall impact on craniofacial growth. PVPS appears to preserve craniofacial growth in the preadolescent period, providing a valuable alternative in resource-limited settings.',
+    'journal': 'Cleft Palate-Craniofacial Journal',
+    'authors': 'Usama S. Hamdan, Lucille Ridgell, Jose A. Garcia-Garcia, Dhruv Ahuja, Kaitlin M. Smith, Lizbeth Roman, Beyhan Annan, Giuliana Roggiero, Wassim Najjar, James Liau, and Puneet Batra',
+    'link': 'https://doi.org/10.1177/10556656261436222'
   }
 ]
 
